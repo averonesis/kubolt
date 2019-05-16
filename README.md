@@ -12,4 +12,4 @@ If the cluster exposed port 10250 to internet it's possible to use getrun functi
 
 
 # Demo
-![demo](https://github.com/averonesis/kubolt/blob/master/git-ip.gif)
+![demo](https://github.com/averonesis/kubolt/blob/master/github-scale.gif)
