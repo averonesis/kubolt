@@ -46,8 +46,13 @@ You could target companies more accurate using Shodan filters like this:
 - country
 - net
 
+# Install 
+```bash
+mkdir output
+pip install -r requirements.txt 
+```
 
-To do it use `--query` param like this:
+# Run
 ```python3
 python kubolt.py --query "asn:123123 org:'ACME Corporation'"
 #or
@@ -62,3 +67,5 @@ python kubolt.py --query "org:'ACME Corporation' country:UK"
 
 # Important
 The Tool provided by the author should only be used for educational purposes. The author can not be held responsible for the misuse of the Tool. The author is not responsible for any direct or indirect damage caused due to the usage of the Tool.
+
+
