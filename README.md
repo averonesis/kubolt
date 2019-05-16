@@ -61,4 +61,4 @@ python kubolt.py --query "org:'ACME Corporation' country:UK"
 ![demo](/github-scale.gif)
 
 # Important
-The Tool provided by the author should only be used for education purposes. The author can not be held responsible for the misuse of the Tool. The author is not responsible for any direct or indirect damage caused due to the usage of the Tool.
+The Tool provided by the author should only be used for educational purposes. The author can not be held responsible for the misuse of the Tool. The author is not responsible for any direct or indirect damage caused due to the usage of the Tool.
