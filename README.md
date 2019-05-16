@@ -55,7 +55,7 @@ python kubolt.py --query "org:'ACME Corporation' country:UK"
 ```
 
 # Shodan 
-**Kubolt** use Shodan API and [Query Credits](https://help.shodan.io/the-basics/credit-types-explained) accordingly, if you run the tool without query filters then you probably will fire all your credits `¯\_(ツ)_/¯`  
+**Kubolt** use Shodan API and [Query Credits](https://help.shodan.io/the-basics/credit-types-explained) accordingly, if you run the tool without query filters then you will probably fire all your credits `¯\_(ツ)_/¯`  
 
 # Demo
 ![demo](/github-scale.gif)
