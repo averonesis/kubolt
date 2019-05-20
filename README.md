@@ -16,14 +16,15 @@ func (s *Server) getRun(request *restful.Request, response *restful.Response) {
 
 # How?
 Okay, let's ask our friend Shodan :trollface:
+
 The basic query is 
 >ssl:true port:10250 404 
 
 **Kubelet** uses port 10250 with SSL by default, 404 is the HTTP response without URL path. 
 
-**Kubolt** ask Shodan by API for list of IP addresses and keep them for other OSINT actions :grin:
+**Kubolt** asks Shodan by API for list of IP addresses and keeps them for other OSINT actions :grin:
 
-First, let's ask Kubelet for running pods and filter hosts where response doesn't contain `Unauthorized` and contain `container` so we could run command inside it. 
+Firstly, let's ask Kubelet for running pods and filter hosts where response doesn't contain `Unauthorized` and contain `container` so we could run command inside it. 
 ```bash
 curl -k https://IP-from-Shodan:10250/runningpods/ 
 ```
