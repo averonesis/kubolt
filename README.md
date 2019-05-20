@@ -24,13 +24,13 @@ The basic query is
 
 **Kubolt** asks Shodan by API for list of IP addresses and keeps them for other OSINT actions :grin:
 
-Firstly, let's ask Kubelet for running pods and filter hosts where response doesn't contain `Unauthorized` and contain `container` so we could run command inside it. 
+Firstly, let's ask Kubelet for running pods and filter hosts where response doesn't contain `Unauthorized` and contains `container` so we can run command inside it. 
 ```bash
 curl -k https://IP-from-Shodan:10250/runningpods/ 
 ```
 Anyway, if you find the host without any running pods at the time, keep it for next time when pods might be started :grin: 
 
-You can list all the available pods from these requests:
+You can list all available pods from these requests:
 ```bash
 curl -k https://IP-from-Shodan:10250/pods/
 #or
