@@ -1,5 +1,7 @@
-
+<p align="center">
 <img src="./logo.png" width="270" height="270">
+</p>
+
 
 # Wat?
 **Kubolt** is simple utility for scanning public unauthinticated kubernetes clusters and run commands inside containers
