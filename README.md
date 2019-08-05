@@ -1,6 +1,4 @@
-<p align="center">
-<img src="./logo.png" width="270" height="270">
-</p>
+
 
 
 # Wat?
