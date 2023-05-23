@@ -1,4 +1,4 @@
 click==6.7
 shodan==1.7.7
-requests==2.18.4
+requests==2.31.0
 urllib3>=1.26.5 
